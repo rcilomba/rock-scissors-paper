@@ -5,11 +5,11 @@ const rock = "rock";
 const scissors = "scissors";
 const paper = "paper";
 
-const gameSelection = ["rock", "scissors", "paper"]
+const gameSelection = ["rock", "scissors", "paper"];
 
 function getComputerChoice(){
     let computerChoice = Math.floor(Math.random() * gameSelection.length); //skriver ut index
-    let chosenValue = gameSelection[computerChoice] //skriver ut värdet istället för index
+    let chosenValue = gameSelection[computerChoice]; //skriver ut värdet istället för index
     return chosenValue;
 }
 
@@ -27,7 +27,7 @@ function playGame(){
          resultContainer.innerHTML += "<br> You win! Rock beats scissors <br>"
          humanScore++;
        } else if (humanChoice === "scissors" && computerChoice === "paper"){
-         resultContainer.innerHTML += "<br> You won! Scissors beats paper! <br>";
+         resultContainer.innerHTML += "<br> You won! Scissors beats paper!";
          humanScore++;
         } else if (humanChoice === "paper" && computerChoice === "rock"){
             resultContainer.innerHTML += "You won! Paper beats rock! <br>";

@@ -22,22 +22,22 @@ function playGame(){
     function playRound(humanChoice, computerChoice){
         
         if(humanChoice === computerChoice){
-            resultContainer.innerHTML += "<br>No one wins! You both choosed the same!";
+            resultContainer.innerHTML += "<br> No one wins! You both choosed the same!";
        } else if (humanChoice === "rock" && computerChoice === "scissors"){
-         resultContainer.innerHTML += "<br> You win! Rock beats scissors"
+         resultContainer.innerHTML += "<br> You win! Rock beats scissors <br>"
          humanScore++;
        } else if (humanChoice === "scissors" && computerChoice === "paper"){
-         resultContainer.innerHTML += "<br>You won! Scissors beats paper!";
+         resultContainer.innerHTML += "<br> You won! Scissors beats paper! <br>";
          humanScore++;
         } else if (humanChoice === "paper" && computerChoice === "rock"){
-            resultContainer.innerHTML += "<br>You won! Paper beats rock!";
+            resultContainer.innerHTML += "You won! Paper beats rock! <br>";
             humanScore++;
         } else {
-            resultContainer.innerHTML += "<br>You lost!";
+            resultContainer.innerHTML += "You lost! <br>";
             computerScore++;
         } 
     
-        resultContainer.innerHTML += `<br>Current Scores - Human: ${humanScore}, Computer: ${computerScore}`
+        resultContainer.innerHTML += `<br> Current Scores - Human: ${humanScore}, Computer: ${computerScore} <br>`
 
         if(humanScore === 5){
             resultContainer.innerHTML ="Congrats! You won!"
@@ -103,11 +103,11 @@ function playGame(){
     })
 
     
-console.log(`human score ${humanScore}`);
-console.log(`computer score ${computerScore}`);
+console.log(`Human score: ${humanScore}`);
+console.log(`Computer score: ${computerScore}`);
   
 //result div
-resultContainer.innerHTML = `human score ${humanScore} <br> computer score ${computerScore}`
+resultContainer.innerHTML = `Human score: ${humanScore} <br> Computer score: ${computerScore}`
  
 
 
